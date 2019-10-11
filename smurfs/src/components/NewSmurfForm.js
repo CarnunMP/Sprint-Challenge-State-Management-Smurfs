@@ -5,7 +5,6 @@ import * as actionCreators from "../state/actionCreators";
 
 export function NewSmurfForm(props) {
     const { formValues, addSmurf } = props;
-    debugger
 
     return (
         <div className="new-smurf-form">

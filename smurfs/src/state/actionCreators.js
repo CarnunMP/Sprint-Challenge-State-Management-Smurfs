@@ -22,5 +22,18 @@ export const getSmurfs = () => dispatch => {
 
 export const addSmurf = (formValues, actions) => dispatch => {
     console.log(formValues);
+
+    axios.post(smurfsAPI, formValues)
+        .then(res => {
+            const smurfs = res.data;
+
+            dispatch({
+                type: types.SET_SMURFS,
+                payload: smurfs,
+            });
+        })
+        .catch(err => {
+            alert(err);
+        })
     actions.resetForm();
 }
