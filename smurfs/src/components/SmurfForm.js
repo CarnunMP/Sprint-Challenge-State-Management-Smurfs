@@ -24,7 +24,7 @@ export function SmurfForm(props) {
                             <div>
                                 <Field name="height" type="text" placeholder="Height" />
                             </div>
-                            <button type="submit" onClick={() => props.submitForm()}>Add Smurf</button>
+                            <button type="submit" onClick={() => submitType = "add"}>Add Smurf</button>
                         </Form>
                     )
                 }}

@@ -26,7 +26,6 @@ export const submit = submitType => dispatch => (formValues, actions) => {
     }
 }
 
-
 export const addSmurf = (formValues, actions, dispatch) => {
     axios.post(smurfsAPI, formValues)
         .then(res => {
@@ -39,6 +38,6 @@ export const addSmurf = (formValues, actions, dispatch) => {
         })
         .catch(err => {
             alert(err);
-        })
+        });
     actions.resetForm();
 }
