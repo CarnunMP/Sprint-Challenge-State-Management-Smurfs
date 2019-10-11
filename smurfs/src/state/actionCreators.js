@@ -20,9 +20,14 @@ export const getSmurfs = () => dispatch => {
         });
 }
 
-export const addSmurf = (formValues, actions) => dispatch => {
-    console.log(formValues);
+export const submit = submitType => dispatch => (formValues, actions) => {
+    if (submitType === "add") {
+        addSmurf(formValues, actions, dispatch);
+    }
+}
 
+
+export const addSmurf = (formValues, actions, dispatch) => {
     axios.post(smurfsAPI, formValues)
         .then(res => {
             const smurfs = res.data;

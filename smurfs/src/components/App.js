@@ -3,7 +3,7 @@ import "./App.css";
 import Smurfs from "./Smurfs";
 import GetSmurfsButton from "./GetSmurfsButton";
 import ClearSmurfsButton from "./ClearSmurfsButton";
-import NewSmurfForm from "./NewSmurfForm";
+import SmurfForm from "./SmurfForm";
 
 class App extends Component {
   render() {
@@ -11,7 +11,7 @@ class App extends Component {
       <div className="App">
         <GetSmurfsButton />
         <ClearSmurfsButton />
-        <NewSmurfForm />
+        <SmurfForm />
         <Smurfs />
       </div>
     );

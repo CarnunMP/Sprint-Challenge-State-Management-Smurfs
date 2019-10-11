@@ -9,7 +9,7 @@ import * as reducers from "./state/reducers";
 
 const rootReducer = combineReducers({
     smurfs: reducers.smurfReducer,
-    formValues: reducers.newSmurfFormReducer,
+    formValues: reducers.smurfFormReducer,
 });
 
 const store = createStore(

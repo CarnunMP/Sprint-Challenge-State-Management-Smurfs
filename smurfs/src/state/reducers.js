@@ -17,7 +17,7 @@ const initialFormValues = {
     age: "",
     height: "",
 }
-export function newSmurfFormReducer(formValues = initialFormValues, action) {
+export function smurfFormReducer(formValues = initialFormValues, action) {
     switch (action.type) {
         default:
             return formValues;

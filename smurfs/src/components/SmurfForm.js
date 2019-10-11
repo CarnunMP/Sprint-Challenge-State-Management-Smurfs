@@ -3,14 +3,15 @@ import { Formik, Form, Field } from "formik";
 import { connect } from "react-redux";
 import * as actionCreators from "../state/actionCreators";
 
-export function NewSmurfForm(props) {
-    const { formValues, addSmurf } = props;
+export function SmurfForm(props) {
+    const { formValues, submit } = props;
+    let submitType = "add";
 
     return (
         <div className="new-smurf-form">
             <Formik 
                 initialValues={formValues}
-                onSubmit={addSmurf}
+                onSubmit={submit(submitType)}
                 render={props => {
                     return (
                         <Form>
@@ -23,7 +24,7 @@ export function NewSmurfForm(props) {
                             <div>
                                 <Field name="height" type="text" placeholder="Height" />
                             </div>
-                            <button type="submit">Add Smurf</button>
+                            <button type="submit" onClick={() => props.submitForm()}>Add Smurf</button>
                         </Form>
                     )
                 }}
@@ -35,4 +36,4 @@ export function NewSmurfForm(props) {
 export default connect(
     state => state,
     actionCreators,
-)(NewSmurfForm);
+)(SmurfForm);
