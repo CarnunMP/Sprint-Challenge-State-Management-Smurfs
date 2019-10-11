@@ -19,3 +19,8 @@ export const getSmurfs = () => dispatch => {
             alert(err);
         });
 }
+
+export const addSmurf = (formValues, actions) => dispatch => {
+    console.log(formValues);
+    actions.resetForm();
+}

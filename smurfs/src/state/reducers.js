@@ -11,3 +11,15 @@ export function smurfReducer(smurfs = initialSmurfArray, action) {
             return smurfs;
     }
 }
+
+const initialFormValues = {
+    name: "",
+    age: "",
+    height: "",
+}
+export function newSmurfFormReducer(formValues = initialFormValues, action) {
+    switch (action.type) {
+        default:
+            return formValues;
+    }
+}
